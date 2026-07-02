@@ -121,8 +121,7 @@ module SYNC_FIFO_TB;
                  rd_enb<=1'b1; end
                  @(negedge clk) begin
                  wr_enb<=1'b0; 
-                 rd_enb<=1'b0; 
-                 if(dout==8'hca) $display("CORNER CASE READ&&WRITE&&empty IS EXAMINED SUCCESSFULLY");
+                 rd_enb<=1'b0;
                  end //wr should be executed , read ignored.
                  //to check correctness--
                  read;
